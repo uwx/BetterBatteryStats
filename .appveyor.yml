@@ -1,6 +1,14 @@
+version: '{build}'
+
 environment:
   matrix:
     - ANDROID_HOME: 'C:\android-sdk-windows'
+
+skip_tags: true
+branches:
+  only:
+    - master
+
 
 install:
   - appveyor DownloadFile https://dl.google.com/android/repository/sdk-tools-windows-4333796.zip
